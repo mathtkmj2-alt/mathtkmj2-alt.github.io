@@ -2,72 +2,87 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<title>버텍스 디펜스 개인정보처리방침</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>개인정보처리방침 — 버텍스 디펜스</title>
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
+  /* 한 단짜리 문서: 읽기 폭 고정, 조항마다 제목 */
+  :root {
+    --bg: #f6f7fb;
+    --fg: #1a1d2b;
+    --muted: #5b6075;
+    --rule: #dde0ea;
+    --accent: #2563c9;
+    --font: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #0e1020; --fg: #e6e8f2; --muted: #9ba0b8; --rule: #262a40; --accent: #6fa4ff; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --bg: #0e1020; --fg: #e6e8f2; --muted: #9ba0b8; --rule: #262a40; --accent: #6fa4ff; color-scheme: dark; }
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
-    background: #0b1020;
-    color: #e8ecf8;
-    line-height: 1.75;
+    background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 16px; line-height: 1.75;
+    padding-block: 40px 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 72px; }
-  h1 { font-size: 1.8rem; margin: 0 0 8px; }
-  .sub { color: #98a4c4; margin: 0 0 28px; }
-  .card {
-    background: #141b31;
-    border: 1px solid #232c48;
-    border-radius: 16px;
-    padding: 22px 24px;
-    margin: 0 0 16px;
-  }
-  h2 { font-size: 1.05rem; margin: 0 0 10px; color: #cfd8f5; }
-  p { margin: 0 0 10px; }
-  ul { margin: 0 0 10px; padding-left: 20px; }
-  li { margin: 4px 0; }
-  a { color: #7fb2ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  footer { color: #7b87a6; font-size: 0.88rem; margin-top: 28px; }
+  main { max-width: 680px; margin: 0 auto; display: grid; gap: 28px; }
+  header { display: grid; gap: 6px; border-bottom: 1px solid var(--rule); padding-bottom: 20px; }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0; text-wrap: balance; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  section { display: grid; gap: 8px; }
+  h2 { font-size: 1.1rem; margin: 0; }
+  p, ul { margin: 0; }
+  ul { padding-left: 1.2em; display: grid; gap: 4px; }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  .mail { font-weight: 700; user-select: all; }
+  .en { border-top: 1px solid var(--rule); padding-top: 24px; color: var(--muted); font-size: 0.95rem; }
+  .en h2 { color: var(--fg); }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>버텍스 디펜스 개인정보처리방침</h1>
-  <p class="sub">시행일: 2026년 11월 18일 · 앱: 버텍스 디펜스 (Vertex Defense, com.vertexdefense)</p>
+<main>
+  <header>
+    <h1>버텍스 디펜스 개인정보처리방침</h1>
+    <p class="meta">시행일 2026년 11월 21일 · 앱: 버텍스 디펜스 (Vertex Defense, com.vertexdefense)</p>
+  </header>
 
-  <div class="card">
+  <section>
     <h2>1. 앱이 직접 수집하지 않는 정보</h2>
-    <p>버텍스 디펜스는 이름, 이메일, 전화번호 같은 개인정보를 수집하지 않습니다. 별도의 회원가입이 없고, 로그인은 Google Play 게임즈로만 합니다 (2항).</p>
+    <p>버텍스 디펜스는 이메일, 전화번호 같은 연락처를 수집하지 않습니다. 별도의 회원가입이 없고, 로그인은 Google 계정(2항)과 Google Play 게임즈(순위표, 2항)로 합니다. 로그인하지 않고(게스트) 이용할 수도 있습니다.</p>
     <p>게임 진행 상황(레벨, 포인트, 무기, 설정 등)은 이용자의 기기 안에 저장됩니다.</p>
-  </div>
+  </section>
 
-  <div class="card">
-    <h2>2. Google Play 게임즈 (로그인·순위표)</h2>
-    <p>앱은 Google Play 게임즈 서비스로 로그인하고 서바이벌 순위표를 보여 줍니다. Play 게임즈에 로그인되어 있으면 앱을 켤 때 자동으로 로그인됩니다.</p>
+  <section>
+    <h2>2. Google 로그인 · Google Play 게임즈 (순위표)</h2>
+    <p><b>Google 로그인:</b> 시작 화면에서 Google 계정으로 로그인할 수 있습니다. 앱이 받는 정보는 Google 계정 고유 번호와 이름입니다 (이메일은 이용 기록에 남기지 않습니다). 계정 고유 번호는 같은 사람의 이용 기록을 묶어 보기 위해 3항의 이용 기록에 함께 남깁니다.</p>
+    <p><b>Play 게임즈:</b> 앱은 Google Play 게임즈 서비스로 서바이벌 순위표를 보여 줍니다. Play 게임즈에 로그인되어 있으면 앱을 켤 때 자동으로 로그인됩니다.</p>
     <ul>
       <li>앱이 받는 정보: Play 게임즈 플레이어 ID와 닉네임 (이메일 등 다른 계정 정보는 받지 않습니다)</li>
       <li>Google에 보내는 정보: 서바이벌 최고 기록(웨이브 수)</li>
     </ul>
-    <p>순위표에는 Play 게임즈 닉네임과 기록이 다른 이용자에게 공개됩니다. 로그인과 순위표 정보는 Google이 처리하며, <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따릅니다. 개발자는 이 정보를 따로 저장하지 않습니다.</p>
+    <p>순위표에는 Play 게임즈 닉네임과 기록이 다른 이용자에게 공개됩니다. 로그인과 순위표 정보는 Google이 처리하며, Google 개인정보처리방침 (https://policies.google.com/privacy)을 따릅니다. 개발자는 이 정보를 따로 저장하지 않습니다.</p>
     <p>Play 게임즈 프로필의 공개 범위와 로그인은 Play 게임 앱의 설정에서 바꿀 수 있습니다.</p>
-  </div>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>3. 게임 이용 기록 (통계)</h2>
-    <p>게임을 더 낫게 만들기 위해, 누구인지 알 수 없는 형태의 게임 이용 기록을 수집합니다.</p>
+    <p>게임을 더 낫게 만들기 위해 게임 이용 기록을 수집합니다. Google 로그인을 한 경우 Google 계정 고유 번호가 함께 남고, 로그인하지 않은 경우 누구인지 알 수 없는 형태로 남습니다.</p>
     <ul>
-      <li>앱을 처음 실행할 때 만드는 무작위 번호 (이름·계정·광고 ID와 연결되지 않음)</li>
-      <li>스테이지별 시작·클리어·실패·포기, 이어하기 사용 여부, 플레이 시간</li>
-      <li>앱 버전, 기기 기종, 운영체제 버전</li>
+      <li>앱을 처음 실행할 때 게임이 만드는 무작위 번호, 그리고 앱 업데이트 기능이 설치마다 만드는 설치 번호 (둘 다 이름·광고 ID와 연결되지 않음)</li>
+      <li>Google 로그인을 한 경우: Google 계정 고유 번호</li>
+      <li>앱을 켤 때마다 만드는 실행 번호와 그 실행 안의 기록 순서·켠 뒤 지난 시간</li>
+      <li>앱 시작 과정: 업데이트 확인·받기·적용, 게임 화면 불러오기, 로딩이 끝난 시점과 걸린 시간</li>
+      <li>앱 사용 흐름: 어떤 화면에서 어떤 화면으로 옮겼는지와 머문 시간, 일시정지·뒤로 가기, 앱이 다른 앱으로 넘어가거나 다시 돌아온 시점, 앱을 껐을 때 마지막으로 있던 화면</li>
+      <li>게임 진행: 기본 훈련 진행 단계, 스테이지별 시작·클리어·실패·포기, 웨이브마다 남은 방어막·체력, 이어하기 사용 여부, 플레이 시간</li>
+      <li>성장 선택: 고른 무기, 무기 레벨업, 화력·방어막 등 강화와 취소, 강화 초기화, 레벨, 포인트</li>
+      <li>의견 보내기: 이용자가 직접 써서 보낸 글과 종류(버그·난이도·제안·기타) — 보낼 때만</li>
+      <li>앱 버전, 업데이트 버전, 기기 기종, 운영체제 버전</li>
     </ul>
-    <p>이 기록은 어느 스테이지가 너무 어렵거나 쉬운지, 이용자가 어디서 그만두는지 확인하는 데에만 쓰며, 광고나 다른 목적에 쓰지 않습니다. 기록은 개발자의 Google 스프레드시트(Google Sheets)에 보관되고 수집일로부터 최대 2년 뒤 삭제합니다. 전송 과정에서 IP 주소가 쓰일 수 있으나 이용자를 식별하는 데 쓰지 않습니다.</p>
-    <p>앱을 삭제했다가 다시 설치하면 새 무작위 번호가 만들어져 이전 기록과 연결되지 않습니다.</p>
-  </div>
+    <p>이 기록은 어느 스테이지가 너무 어렵거나 쉬운지, 이용자가 어디서 그만두는지, 어떤 무기와 강화를 고르는지 확인해 게임을 고치는 데에만 쓰며, 광고나 다른 목적에 쓰지 않습니다. 기록은 개발자의 Google 스프레드시트(Google Sheets)에 보관되고 수집일로부터 최대 2년 뒤 삭제합니다. 인터넷이 연결되지 않았을 때는 기기에 잠시 모아 두었다가 다음에 보냅니다. 전송 과정에서 IP 주소가 쓰일 수 있으나 이용자를 식별하는 데 쓰지 않습니다.</p>
+    <p>앱을 삭제했다가 다시 설치하면 새 무작위 번호와 새 설치 번호가 만들어집니다. 다시 Google 로그인을 하면 같은 계정 번호로 이전 기록과 묶입니다.</p>
+    <p>의견 보내기로 보낸 글은 위 기록과 함께 보관하고 게임을 고치는 데에만 씁니다. 글에는 이름·연락처 같은 개인정보를 적지 않도록 안내하며, 적혀 있더라도 답장이나 다른 용도로 쓰지 않습니다. 답장이 필요하면 아래 문의 메일로 보내 주세요.</p>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>4. 광고 (Google AdMob)</h2>
     <p>앱은 Google AdMob 광고를 보여 줍니다. 광고를 보여 주는 과정에서 Google이 다음 정보를 수집하고 처리할 수 있습니다.</p>
     <ul>
@@ -75,37 +90,35 @@
       <li>기기 정보 (기종, 운영체제 버전 등)와 대략적인 위치(IP 주소 기반)</li>
       <li>광고 노출·클릭 기록</li>
     </ul>
-    <p>이 정보는 광고 제공, 광고 성과 측정, 부정 클릭 방지에 쓰입니다. Google의 처리 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트·앱의 데이터 사용 안내</a>에서 볼 수 있습니다.</p>
-    <p>기기 설정의 Google → 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
-  </div>
+    <p>이 정보는 광고 제공, 광고 성과 측정, 부정 클릭 방지에 쓰입니다. Google의 처리 방식은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 파트너 사이트·앱의 데이터 사용 안내</a>에서 볼 수 있습니다.</p>
+    <p>기기 설정의 <b>Google → 광고</b>에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>5. 결제 (광고 제거)</h2>
     <p>광고 제거 상품의 결제는 Google Play가 처리합니다. 개발자는 카드 번호 등 결제 정보를 받지 않습니다. 앱은 '광고 제거를 구매했는지'만 기기에 저장합니다.</p>
-  </div>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>6. 보관과 삭제</h2>
-    <p>앱을 삭제하면 기기에 저장된 게임 기록과 구매 상태 표시가 함께 지워집니다. 구매 내역은 Google Play 계정에 남아 있어 다시 설치한 뒤 '구매 복원'으로 되찾을 수 있습니다. 순위표 기록은 Google Play 게임즈에 남으며, Play 게임 앱에서 Play 게임즈 프로필과 데이터를 삭제할 수 있습니다.</p>
-  </div>
+    <p>앱을 삭제하면 기기에 저장된 게임 기록과 구매 상태 표시가 함께 지워집니다. 구매 내역은 Google Play 계정에 남아 있어 다시 설치한 뒤 '구매 복원'으로 되찾을 수 있습니다. 순위표 기록은 Google Play 게임즈에 남으며, Play 게임 앱에서 Play 게임즈 프로필과 데이터를 삭제할 수 있습니다. Google 계정 번호가 남은 이용 기록의 삭제를 원하면 아래 문의 메일로 요청해 주세요. 확인 후 삭제합니다. Google 계정과 앱의 연결은 Google 계정 설정(보안 → 서드 파티 앱 및 서비스)에서 해제할 수 있습니다.</p>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>7. 아동</h2>
     <p>이 앱은 만 13세 미만 아동을 대상으로 하지 않습니다.</p>
-  </div>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>8. 변경</h2>
     <p>이 방침이 바뀌면 이 페이지에 새 내용과 시행일을 올립니다.</p>
-  </div>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>9. 문의</h2>
-    <p>개인정보 관련 문의: <a href="mailto:math.dapulsu@gmail.com">math.dapulsu@gmail.com</a></p>
-    <p><a href="/">버텍스 디펜스 공식 안내 페이지로 돌아가기</a></p>
-  </div>
+    <p>개인정보 관련 문의: <span class="mail">math.dapulsu@gmail.com</span></p>
+  </section>
 
-  <footer>© 2026 dapulsu.</footer>
-</div>
+</main>
 </body>
 </html>
